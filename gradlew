@@ -5,7 +5,7 @@ if [ -n "$JAVA_HOME" ] ; then
 fi
 
 if [ -n "$JAVA_HOME" ] ; then
-    if [ -x "$JAVA_HOME/bin/sh" ] ; then
+    if [ -x "$JAVA_HOME/bin/java" ] ; then
         JAVACMD="$JAVA_HOME/bin/java"
     else
         echo "ERROR: JAVA_HOME is set to an invalid directory: $JAVA_HOME" >&2
