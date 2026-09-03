@@ -39,7 +39,8 @@ class FloatingService : Service() {
                 settings.domStorageEnabled = true
                 settings.mediaPlaybackRequiresUserGesture = false
                 addJavascriptInterface(WebAppInterface(), "Android")
-                layoutParams = FrameLayout.LayoutParams(280, 280)
+                // Size increased to 340x340 to prevent UI clipping and make buttons fully visible
+                layoutParams = FrameLayout.LayoutParams(340, 340)
                 loadUrl("file:///android_asset/index.html")
             }
             container.addView(webView)
@@ -47,10 +48,10 @@ class FloatingService : Service() {
             bubbleView = TextView(this).apply {
                 text = "⚡"
                 setTextColor(Color.WHITE)
-                textSize = 22f
+                textSize = 24f
                 gravity = Gravity.CENTER
                 setBackgroundColor(Color.parseColor("#cc000000"))
-                setPadding(18, 18, 18, 18)
+                setPadding(20, 20, 20, 20)
                 visibility = View.GONE
             }
 
